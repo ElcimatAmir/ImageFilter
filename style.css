@@ -1,0 +1,64 @@
+html {
+	margin: 0;
+	background-image: url("img/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+button {
+	margin-left: 22.5px;
+	width: 85px;
+	height: 35px;
+	border:1px solid black ;
+	border-radius: 10px;
+	background-color: #131313;
+	color: #FFFFFF;
+}
+button:hover{
+	border:1px solid black ;
+	border-radius: 15px ;
+	background-color: #FFFFFF;
+	color: #131313;	
+}
+#buttonsDiv {
+	width: 80%;
+	height: 150px ;
+	margin-left: 10%;
+}
+
+#buttonsDiv h3 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: #BDBDBD;
+}
+
+#mainDiv{
+	margin-left: auto;
+	margin-right: auto;  		
+	width: 80%;
+	height: 400px;
+}
+#originalImage {
+	width: 45%;
+	height: 100%;
+	float: left;
+	background-image: url("img/image.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid black;
+	border-radius: 15px;
+}
+#editImage {	
+	width: 45%;
+	height: 100%;
+	margin-left: 5%;
+	background-image: url("img/image.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid black;
+	border-radius: 15px;
+}
