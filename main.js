@@ -1,3 +1,27 @@
+// для установки первоначальных фотграфии в обоих дивов
+window.onload = function(){
+	var canvas  = document.getElementById("originalImage");
+	var canvas2 = document.getElementById("editImage");
+	var context = canvas.getContext("2d") ;	
+	var context2 = canvas2.getContext("2d") ;	
+	var img = new Image() ;
+	var img2 = new Image() ;
+	
+	img.onload = function(){
+		context.drawImage(img,0,0,canvas.width,canvas.height);
+		var pixelData = context.getImageData(0,0,canvas.width,canvas.height);
+		context.putImageData(pixelData,0,0);	
+	}
+	img.src = 'img/image.jpeg' ;
+
+	img2.onload = function(){
+		context2.drawImage(img,0,0,canvas2.width,canvas2.height);
+		var pixelData = context2.getImageData(0,0,canvas2.width,canvas2.height);
+		context2.putImageData(pixelData,0,0);	
+	}
+	img2.src = 'img/image.jpeg' ;
+}
+
 var originalButton  = document.getElementById("originalButton");
 var negativeButton  = document.getElementById("negativeButton");
 var lightnessbutton = document.getElementById("lightnessButton");
@@ -16,10 +40,11 @@ originalButton.onclick = function(){
 	img.onload = function(){
 		context.drawImage(img,0,0,canvas.width,canvas.height);
 		var pixelData = context.getImageData(0,0,canvas.width,canvas.height);
-		for (var i = 0; i < pixelData.data.length; i += 4) {
+	// нижний закоментиравыный код для того чтобы можно было маниполирывать с пиксилями	
+		//for (var i = 0; i < pixelData.data.length; i += 4) {
 				//pixelData.data[i+1] = 0;	//i = red | i+1 = green | i+2 = blue| i+3 = alpha.
 				//pixelData.data[i+2] = 0;
-		}
+		//}
 			context.putImageData(pixelData,0,0);	
 	}
 	img.src = 'img/image.jpeg' ;
